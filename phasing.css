@@ -1,0 +1,78 @@
+@media (min-width: 1500px) {
+  .container {
+      max-width: 1350px;
+  }
+}
+
+body {
+  background-image: url("assets/studio-alpha.jpg");
+  background-size: cover;
+}
+
+.recording-range::-webkit-slider-thumb {
+  background: #dc3545;
+}
+
+.recording-range::-moz-range-thumb {
+  background: #dc3545;
+}
+
+.recording-range::-ms-thumb {
+  background: #dc3545;
+}
+
+#new-tape {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#record-button, #upload-button {
+  width: 200px;
+  margin: 0px;
+  height: 50px;
+  display: block;
+}
+
+.tape-rate {
+  width: 70px !important;
+}
+
+.tape-play {
+  width: 70px !important;
+}
+
+.tape-volume {
+  width: 200px;
+}
+
+#tape-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tape {
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+@font-face {
+  font-family: "orcaext";
+  src: url(assets/orcaext.ttf) format("truetype");
+}
+
+.tape-name {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 15pt;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.tape-position {
+  width: 200px;
+}

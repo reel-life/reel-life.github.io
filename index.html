@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
+  <link rel="stylesheet" href="phasing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+  <title>Reel Life</title>
+</head>
+<body class="bg-light">
+  <div class="container mt-4">
+    <!-- For recording to a tape machine from another tape machine's output:
+      <select id="record-src" class="col-3 form-control custom-select my-1 mr-2">
+        <option value="" disabled>Source</option>
+        <option selected>Microphone</option>
+      </select>
+    -->
+    <h1>Reel Life</h1>
+    <hr>
+    <h3>Tape Machines</h3>
+    <div id="tape-box">
+      <div class="tape" id="tape-template" hidden>
+        <div class="reel-canvas"></div>
+      </div>
+      <div id="new-tape">
+        <button id="record-button" type="button" class="btn btn-danger" onclick="recordTape()">Record new tape</button>
+        <button id="upload-button" type="button" class="btn btn-info" onclick="document.getElementById('file-input').click()">Upload new tape</button>
+        <input id="file-input" accept="audio/*" type="file" hidden onchange="uploadTape()"/>
+      </div>
+    </div>
+  </div>
+
+  <audio id="switch-audio" src="audio/switch.opus" hidden></audio>
+
+  <!-- jquery included only for bootstrap -->
+  <script src="lib/jquery-3.4.1.slim.min.js"></script>
+  <script src="lib/bootstrap.bundle.min.js"></script>
+  <script src="phasing.js"></script>
+  <script src="lib/p5.js"></script>
+	<script src="lib/p5.dom.js"></script>
+	<script src="lib/p5.sound.js"></script>
+  <script src="sketch.js"></script>
+</html>
